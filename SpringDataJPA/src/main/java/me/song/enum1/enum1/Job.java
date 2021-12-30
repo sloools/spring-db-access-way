@@ -14,6 +14,7 @@ public enum Job implements EnumMapper{
 
     @Override
     public String getCode() {
+        System.out.println("I am JOB Enum");
         return job;
     }
 

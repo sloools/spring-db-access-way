@@ -1,7 +1,7 @@
 package me.song.enum1.service;
 
 import lombok.RequiredArgsConstructor;
-import me.song.enum1.dto.Person;
+import me.song.enum1.Entity.Person;
 import me.song.enum1.repository.SampleRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

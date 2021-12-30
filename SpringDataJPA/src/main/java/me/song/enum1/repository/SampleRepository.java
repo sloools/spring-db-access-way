@@ -1,6 +1,6 @@
 package me.song.enum1.repository;
 
-import me.song.enum1.dto.Person;
+import me.song.enum1.Entity.Person;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.QueryHints;
 import org.springframework.stereotype.Repository;

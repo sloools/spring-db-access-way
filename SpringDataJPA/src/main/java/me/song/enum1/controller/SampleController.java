@@ -1,7 +1,7 @@
 package me.song.enum1.controller;
 
 import lombok.RequiredArgsConstructor;
-import me.song.enum1.dto.Person;
+import me.song.enum1.Entity.Person;
 import me.song.enum1.service.SampleService;
 import org.springframework.web.bind.annotation.*;
 

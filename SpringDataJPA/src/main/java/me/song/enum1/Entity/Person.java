@@ -1,4 +1,4 @@
-package me.song.enum1.dto;
+package me.song.enum1.Entity;
 
 import lombok.*;
 import me.song.enum1.enum1.Job;
@@ -20,7 +20,7 @@ public class Person {
     Integer age;
 
     @Enumerated(EnumType.STRING)
-    Job job;
+    Job job; // DB에 insert 시, JOB enum에 등록된 값이 아니면 에러를 발생한다.
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
