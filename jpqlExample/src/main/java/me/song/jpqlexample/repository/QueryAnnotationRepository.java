@@ -8,6 +8,7 @@ import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
+/* JpaRepository를 상속한 Repository를 JPQL을 사용하여 커스터마이징 */
 @Repository
 public interface QueryAnnotationRepository extends JpaRepository<Sample, Integer> {
 
