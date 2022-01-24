@@ -37,4 +37,13 @@ public class SampleRepositoryTest {
             System.out.println(customerInfo.toString());
         }
     }
+
+    @Test
+    @DisplayName("QueryDsl Find Customer with Names Test")
+    public void findCustomerWithNamesTest(){
+        sampleJpaRepository.findNamesAndJobByJob("Programmer").
+                stream().forEach(x ->
+                                System.out.println(x.toString())
+                        );
+    }
 }
