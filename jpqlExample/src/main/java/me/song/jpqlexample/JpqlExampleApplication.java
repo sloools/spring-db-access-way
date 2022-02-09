@@ -4,7 +4,12 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
- * JPQL (객체지향 SQL)
+ *
+ * JPA의 객체지향 쿼리언어 종류
+ * JPQL, QueryDSL, Criteria, NativeQuery 가 있다.
+ * 이 중, 데이터베이스 의존적인 것은 NativeQuery 뿐이다.
+ *
+ * JPQL
  * :엔티티 객체를 대상으로 하는 쿼리
  *  sql로 변환됨
  *
