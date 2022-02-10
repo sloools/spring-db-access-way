@@ -1,5 +1,6 @@
 package me.song.jpqlexample.querydsl;
 
+import me.song.jpqlexample.entity.Customer;
 import me.song.jpqlexample.entity.Sample;
 import org.springframework.data.jpa.repository.JpaRepository;
 
@@ -14,4 +15,6 @@ public interface SampleJpaRepository extends JpaRepository<Sample, Integer>, Sam
     List<Sample> findAllByNameOrderById(String name);
 
     List<Sample> findAllByNameOrderByIdDesc(String name);
+
+    List<Customer> findNamesDynamicQuery(String name, String job);
 }

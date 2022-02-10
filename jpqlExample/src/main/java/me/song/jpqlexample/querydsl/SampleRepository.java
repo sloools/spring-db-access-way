@@ -1,6 +1,7 @@
 package me.song.jpqlexample.querydsl;
 
 import com.querydsl.core.Tuple;
+import me.song.jpqlexample.entity.Customer;
 import me.song.jpqlexample.entity.CustomerInfo;
 import me.song.jpqlexample.entity.CustomerWithNames;
 import me.song.jpqlexample.entity.Sample;
@@ -16,6 +17,8 @@ public interface SampleRepository {
     List<CustomerInfo> findCustomerInfo();
 
     List<CustomerWithNames> findNamesAndJobByJob(String job);
+
+    List<Customer> findNamesDynamicQuery(String name, String job);
 }
 
 
