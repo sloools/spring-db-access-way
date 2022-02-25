@@ -16,6 +16,28 @@
         WHERE NAME = #{name}
     </select>
 
+    <!--  collection : mapper에서 받아온 파라메터, item : 받은 인자값을 alias 명으로 사용, index : 반복되는 구문 번호  -->
+    <select id="findAllSampleInName" resultType="me.song.mybatis.entity.Sample">
+        SELECT * FROM Sample
+        WHERE
+              <choose>
+                  <when test="names.size != 0">
+                      NAME IN
+                      <foreach collection="names" item="name" index="index" separator="," open="(" close=")">
+                          #{name}
+                      </foreach>
+                  </when>
+              </choose>
+    </select>
+
+    <select id="findAllSampleInNameBySampleList" resultType="me.song.mybatis.entity.Sample">
+        SELECT * FROM Sample
+        WHERE
+            NAME IN
+            <foreach collection="sampleReqs" item="samples" separator="," open="(" close=")">
+                #{samples.name}
+            </foreach>
+    </select>
 
 </mapper>
 

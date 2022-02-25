@@ -1,6 +1,7 @@
 package me.song.mybatis.mapper;
 
 import me.song.mybatis.entity.Sample;
+import me.song.mybatis.entity.SampleReq;
 import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;
@@ -14,4 +15,8 @@ public interface SampleMapper {
     Sample findSampleByName(String name);
 
     List<Sample> findAllSampleByName(String name);
+
+    List<Sample> findAllSampleInName(List<String> names);
+
+    List<Sample> findAllSampleInNameBySampleList(List<SampleReq> sampleReqs);
 }
